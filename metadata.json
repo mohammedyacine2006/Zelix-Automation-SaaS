@@ -1,0 +1,6 @@
+{
+  "name": "Zelix - Enterprise AI Agent & SaaS Workflow Platform",
+  "description": "Ultra-premium ThemeForest-grade SaaS & AI Startup template featuring Neon Lime & Obsidian design system, Lenis smooth scroll, GSAP animations, interactive AI playground, live ROI calculator, Bento-grid feature matrix, dynamic dark/light mode, pricing toggle, and conversion-optimized components.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
