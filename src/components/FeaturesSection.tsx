@@ -66,7 +66,7 @@ export function FeaturesSection() {
   };
 
   return (
-    <section ref={sectionRef} className="w-full bg-[#F4F5F7] pt-10 pb-16 sm:pb-24 relative z-20 overflow-hidden">
+    <section ref={sectionRef} id="features" className="w-full bg-[#F4F5F7] pt-10 pb-16 sm:pb-24 relative z-20 overflow-hidden">
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

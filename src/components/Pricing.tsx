@@ -204,7 +204,7 @@ export const Pricing: React.FC = () => {
               <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mb-3">
                 Have specialized requirements or high-volume needs? Contact our enterprise team.
               </p>
-              <a href="#" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-900 hover:text-slate-700 transition-colors">
+              <a href="/contact" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-900 hover:text-slate-700 transition-colors">
                 Talk to Sales <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>

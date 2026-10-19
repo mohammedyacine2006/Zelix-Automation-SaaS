@@ -59,15 +59,15 @@ const tags = ['Automation', 'AI Agents', 'Workflows', 'SaaS', 'Webhooks', 'APIs'
 export const BlogPage: React.FC = () => {
   return (
     <div className="pt-28 sm:pt-32 pb-0 w-full min-h-screen flex flex-col items-center bg-[#F4F5F7] overflow-x-hidden">
-      
+
       {/* Hero Header Section */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className="w-full pt-6 md:pt-8 pb-8 sm:pb-12 flex flex-col items-center justify-center text-center px-4"
       >
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -79,7 +79,7 @@ export const BlogPage: React.FC = () => {
           <span className="text-xs sm:text-sm font-medium text-[#111827] tracking-tight">Blog</span>
         </motion.div>
 
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
@@ -88,7 +88,7 @@ export const BlogPage: React.FC = () => {
           Stay ahead with automation insights
         </motion.h1>
 
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
@@ -100,11 +100,11 @@ export const BlogPage: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-          
+
           {/* Left Feed Column */}
           <div className="lg:col-span-8 space-y-10 sm:space-y-16">
             {articles.map((article, index) => (
-              <motion.article 
+              <motion.article
                 key={article.id}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -113,14 +113,14 @@ export const BlogPage: React.FC = () => {
               >
                 {/* Image Frame */}
                 <div className="relative overflow-hidden rounded-[20px] sm:rounded-[28px] aspect-[16/9] mb-5 sm:mb-6 shadow-sm border border-slate-200/60 group cursor-pointer">
-                  <img 
-                    src={article.image} 
-                    alt={article.title} 
+                  <img
+                    src={article.image}
+                    alt={article.title}
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   {article.isVideo && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
-                      <motion.div 
+                      <motion.div
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/40 shadow-lg"
@@ -165,9 +165,9 @@ export const BlogPage: React.FC = () => {
 
           {/* Right Sidebar Column */}
           <div className="lg:col-span-4 space-y-6 sm:space-y-8 lg:sticky lg:top-24 w-full">
-            
+
             {/* Search Widget */}
-            <motion.div 
+            <motion.div
               className="bg-white rounded-[20px] sm:rounded-[24px] p-5 sm:p-8 border border-slate-200/60 shadow-sm"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -175,8 +175,8 @@ export const BlogPage: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <div className="relative flex items-center">
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   placeholder="Enter keywords..."
                   className="w-full h-11 sm:h-12 pl-4 pr-10 rounded-full bg-[#F4F5F7] border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/20 transition-all"
                 />
@@ -185,7 +185,7 @@ export const BlogPage: React.FC = () => {
             </motion.div>
 
             {/* Categories Widget */}
-            <motion.div 
+            <motion.div
               className="bg-white rounded-[20px] sm:rounded-[24px] p-5 sm:p-8 border border-slate-200/60 shadow-sm"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -205,7 +205,7 @@ export const BlogPage: React.FC = () => {
             </motion.div>
 
             {/* Latest News Widget */}
-            <motion.div 
+            <motion.div
               className="bg-white rounded-[20px] sm:rounded-[24px] p-5 sm:p-8 border border-slate-200/60 shadow-sm"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -218,8 +218,8 @@ export const BlogPage: React.FC = () => {
                 {latestNews.map((news) => (
                   <div key={news.id} className="flex gap-3.5 sm:gap-4 items-center group cursor-pointer">
                     <div className="overflow-hidden rounded-xl w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0">
-                      <img 
-                        src={news.image} 
+                      <img
+                        src={news.image}
                         alt={news.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
@@ -236,7 +236,7 @@ export const BlogPage: React.FC = () => {
             </motion.div>
 
             {/* Tags Widget */}
-            <motion.div 
+            <motion.div
               className="bg-white rounded-[20px] sm:rounded-[24px] p-5 sm:p-8 border border-slate-200/60 shadow-sm"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -247,7 +247,7 @@ export const BlogPage: React.FC = () => {
               <div className="h-0.5 w-8 bg-violet-600 mb-4"></div>
               <div className="flex flex-wrap gap-2">
                 {tags.map((tag, index) => (
-                  <span 
+                  <span
                     key={index}
                     className="px-3 sm:px-4 py-1.5 rounded-full bg-[#F4F5F7] border border-slate-200/80 text-xs font-medium text-slate-700 hover:bg-[#0F172A] hover:text-white transition-all cursor-pointer"
                   >
@@ -258,7 +258,7 @@ export const BlogPage: React.FC = () => {
             </motion.div>
 
             {/* Newsletter Widget */}
-            <motion.div 
+            <motion.div
               className="bg-white rounded-[20px] sm:rounded-[24px] p-5 sm:p-8 border border-slate-200/60 shadow-sm"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -271,9 +271,9 @@ export const BlogPage: React.FC = () => {
                 Get expert workflow breakdown guides and updates delivered straight to your inbox.
               </p>
               <form className="space-y-3 sm:space-y-4" onSubmit={(e) => e.preventDefault()}>
-                <input 
-                  type="email" 
-                  placeholder="Enter your email" 
+                <input
+                  type="email"
+                  placeholder="Enter your email"
                   className="w-full h-11 sm:h-12 px-4 rounded-full bg-[#F4F5F7] border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/20 transition-all"
                 />
                 <button className="group relative flex items-center h-[42px] sm:h-[46px] w-full bg-[#0F172A] rounded-full text-white font-medium text-xs sm:text-sm shadow-sm hover:bg-slate-800 transition-colors overflow-hidden cursor-pointer">
@@ -290,7 +290,7 @@ export const BlogPage: React.FC = () => {
 
         </div>
       </div>
-      
+
       <CTASection />
     </div>
   );

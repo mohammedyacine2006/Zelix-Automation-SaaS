@@ -66,8 +66,8 @@ export default function CTASection() {
           </motion.a>
 
           {/* Secondary Button */}
-          <motion.button
-            onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+          <motion.a
+            href="/#pricing"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="group relative flex items-center h-[48px] sm:h-[52px] w-full sm:w-[180px] bg-white border border-slate-200/90 rounded-full text-slate-900 font-medium text-sm sm:text-[15.5px] shadow-sm hover:bg-slate-50 transition-colors overflow-hidden cursor-pointer"
@@ -78,7 +78,7 @@ export default function CTASection() {
             <span className="w-full text-center pl-8 sm:pl-10 pr-2 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:-translate-x-4 sm:group-hover:-translate-x-6">
               Book Demo
             </span>
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </section>

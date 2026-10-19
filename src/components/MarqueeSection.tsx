@@ -59,9 +59,9 @@ export const MarqueeSection: React.FC = () => {
         {/* Row 1 - Gradient Background, Right to Left */}
         <div className="relative w-full bg-[#0B0F17] flex items-center py-4 sm:py-6 md:py-7 border-b border-slate-800 overflow-hidden">
           {/* Edge Fade Masks */}
-          <div className="absolute inset-0 z-10 pointer-events-none" 
-               style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}></div>
-          
+          <div className="absolute inset-0 z-10 pointer-events-none"
+            style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}></div>
+
           <div className="flex w-max animate-marquee text-white">
             <Row1Set />
             <Row1Set />
@@ -71,9 +71,9 @@ export const MarqueeSection: React.FC = () => {
         {/* Row 2 - Light Background, Left to Right */}
         <div className="relative w-full bg-slate-100 flex items-center py-4 sm:py-6 md:py-7 border-b border-slate-200 overflow-hidden">
           {/* Edge Fade Masks */}
-          <div className="absolute inset-0 z-10 pointer-events-none" 
-               style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}></div>
-          
+          <div className="absolute inset-0 z-10 pointer-events-none"
+            style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}></div>
+
           <div className="flex w-max animate-marquee-reverse text-slate-900">
             <Row2Set />
             <Row2Set />

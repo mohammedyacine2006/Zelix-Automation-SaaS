@@ -47,7 +47,7 @@ export const PlansSupportMenu: React.FC = () => {
                 </div>
               </a>
               
-              <a href="/referral" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+              <a href="/#pricing" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
                 <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                   <Share2 className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
                 </div>
@@ -57,7 +57,7 @@ export const PlansSupportMenu: React.FC = () => {
                 </div>
               </a>
               
-              <a href="/affiliate" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+              <a href="/contact" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
                 <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                   <Gem className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
                 </div>
@@ -67,7 +67,7 @@ export const PlansSupportMenu: React.FC = () => {
                 </div>
               </a>
               
-              <a href="/affiliate-policy" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+              <a href="/contact" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
                 <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                   <FileText className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
                 </div>
@@ -80,7 +80,7 @@ export const PlansSupportMenu: React.FC = () => {
             
             {/* Column 2 */}
             <div className="flex flex-col gap-1 lg:gap-1">
-              <a href="/terms" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+              <a href="/contact" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
                 <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                   <File className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
                 </div>
@@ -90,7 +90,7 @@ export const PlansSupportMenu: React.FC = () => {
                 </div>
               </a>
               
-              <a href="/privacy" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+              <a href="/contact" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
                 <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                   <Shield className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
                 </div>
@@ -100,7 +100,7 @@ export const PlansSupportMenu: React.FC = () => {
                 </div>
               </a>
               
-              <a href="/refund" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+              <a href="/#pricing" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
                 <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                   <DollarSign className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
                 </div>
@@ -110,7 +110,7 @@ export const PlansSupportMenu: React.FC = () => {
                 </div>
               </a>
               
-              <a href="/gdpr" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+              <a href="/about" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
                 <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                   <UserCheck className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
                 </div>
@@ -120,7 +120,7 @@ export const PlansSupportMenu: React.FC = () => {
                 </div>
               </a>
               
-              <a href="/legal" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+              <a href="/contact" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
                 <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                   <Scale className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
                 </div>
@@ -137,7 +137,7 @@ export const PlansSupportMenu: React.FC = () => {
           <div className="col-span-1 lg:col-span-4 flex flex-col pt-2 lg:pt-0 border-t lg:border-t-0 border-slate-100">
             <span className="text-xs text-slate-400 font-medium mb-2.5 block">What's New</span>
             
-            <div className="relative overflow-hidden rounded-2xl p-5 lg:p-6 min-h-[180px] lg:min-h-[220px] flex flex-col justify-end group cursor-pointer border border-slate-800/80">
+            <a href="/blog" className="relative overflow-hidden rounded-2xl p-5 lg:p-6 min-h-[180px] lg:min-h-[220px] flex flex-col justify-end group cursor-pointer border border-slate-800/80 block">
               <div className="absolute inset-0 bg-[url('/images/image5.webp')] bg-cover bg-center transition-transform duration-500 group-hover:scale-105"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent"></div>
               
@@ -145,7 +145,7 @@ export const PlansSupportMenu: React.FC = () => {
               <p className="relative z-10 text-slate-300 text-[11px] lg:text-xs leading-relaxed">
                 Access all your workflows, analytics, and integrations in one smart dashboard.
               </p>
-            </div>
+            </a>
           </div>
 
         </div>

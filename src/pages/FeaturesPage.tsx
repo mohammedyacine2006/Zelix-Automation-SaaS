@@ -7,7 +7,7 @@ export const FeaturesPage: React.FC = () => {
   return (
     <div className="pt-32 pb-0 w-full min-h-screen flex flex-col items-center bg-[#F4F5F7]">
       {/* Hero Header Section */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -32,9 +32,9 @@ export const FeaturesPage: React.FC = () => {
       {/* Features Grid Section */}
       <section className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
+
           {/* Card 1 - Trusted Users */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -45,15 +45,15 @@ export const FeaturesPage: React.FC = () => {
               <div className="flex justify-between items-start">
                 <div className="flex -space-x-3">
                   {[1, 2, 3].map((imgId, idx) => (
-                    <motion.img 
+                    <motion.img
                       key={imgId}
                       initial={{ opacity: 0, scale: 0.5, x: -10 }}
                       whileInView={{ opacity: 1, scale: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: 0.2 + idx * 0.15 }}
-                      src={`https://i.pravatar.cc/100?img=${imgId}`} 
-                      className="w-10 h-10 rounded-full border-2 border-[#111319] relative z-30" 
-                      alt="User" 
+                      src={`https://i.pravatar.cc/100?img=${imgId}`}
+                      className="w-10 h-10 rounded-full border-2 border-[#111319] relative z-30"
+                      alt="User"
                     />
                   ))}
                 </div>
@@ -78,7 +78,7 @@ export const FeaturesPage: React.FC = () => {
           </motion.div>
 
           {/* Card 2 - Multi-App Connectors */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -86,7 +86,7 @@ export const FeaturesPage: React.FC = () => {
             className="bg-white rounded-[32px] border border-slate-100 p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow group"
           >
             <div className="bg-[#111319] w-full h-[200px] p-6 rounded-2xl relative overflow-hidden flex flex-col justify-center gap-3 text-white">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -101,8 +101,8 @@ export const FeaturesPage: React.FC = () => {
                   <div className="text-xs text-white/80">Triggered at 10:20 AM</div>
                 </div>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -122,7 +122,7 @@ export const FeaturesPage: React.FC = () => {
           </motion.div>
 
           {/* Card 3 - Real-time Analytics (Bar Chart Animation) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -142,7 +142,7 @@ export const FeaturesPage: React.FC = () => {
               <div className="flex items-end justify-between gap-1 h-16 mt-2">
                 {[40, 25, 60, 30, 45, 80, 50, 90].map((h, i) => (
                   <div key={i} className="w-full bg-[#2A2D3A] rounded-t-sm relative flex flex-col justify-end h-full">
-                    <motion.div 
+                    <motion.div
                       initial={{ height: "0%" }}
                       whileInView={{ height: `${h}%` }}
                       viewport={{ once: true }}
@@ -160,7 +160,7 @@ export const FeaturesPage: React.FC = () => {
           </motion.div>
 
           {/* Card 4 - Cost Scaling */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -199,7 +199,7 @@ export const FeaturesPage: React.FC = () => {
           </motion.div>
 
           {/* Card 5 - AI Node */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -208,7 +208,7 @@ export const FeaturesPage: React.FC = () => {
           >
             <div className="bg-[#111319] w-full h-[200px] p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between text-white">
               <div className="flex items-center gap-4">
-                <motion.div 
+                <motion.div
                   initial={{ scale: 0.8, rotate: -10 }}
                   whileInView={{ scale: 1, rotate: 0 }}
                   viewport={{ once: true }}
@@ -222,8 +222,8 @@ export const FeaturesPage: React.FC = () => {
                   <div className="text-xs text-slate-400">Data Processing</div>
                 </div>
               </div>
-              
-              <motion.div 
+
+              <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -247,7 +247,7 @@ export const FeaturesPage: React.FC = () => {
           </motion.div>
 
           {/* Card 6 - SOC2 Guardrails */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -264,8 +264,8 @@ export const FeaturesPage: React.FC = () => {
                   <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </div>
               </div>
-              
-              <motion.div 
+
+              <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -287,7 +287,7 @@ export const FeaturesPage: React.FC = () => {
 
       {/* Use-Case / Workflow Fit Section */}
       <section className="w-full max-w-[1380px] mx-auto px-6 py-12 lg:py-20">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -303,11 +303,11 @@ export const FeaturesPage: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          
+
           {/* Left Column - Stacked Cards */}
           <div className="lg:col-span-6 flex flex-col gap-8">
             {/* Card 1 */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -321,8 +321,8 @@ export const FeaturesPage: React.FC = () => {
                   "Self-healing API Webhooks and real-time database sync",
                   "In-app AI copilot integrations and automated ticket routing"
                 ].map((item, idx) => (
-                  <motion.li 
-                    key={idx} 
+                  <motion.li
+                    key={idx}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -337,7 +337,7 @@ export const FeaturesPage: React.FC = () => {
             </motion.div>
 
             {/* Card 2 */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -351,8 +351,8 @@ export const FeaturesPage: React.FC = () => {
                   "Cross-platform data sync between CRM, Slack, and cloud storage",
                   "Automated report generation and real-time operational alerts"
                 ].map((item, idx) => (
-                  <motion.li 
-                    key={idx} 
+                  <motion.li
+                    key={idx}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -369,7 +369,7 @@ export const FeaturesPage: React.FC = () => {
 
           {/* Right Column - Tall Card */}
           <div className="lg:col-span-6">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -383,8 +383,8 @@ export const FeaturesPage: React.FC = () => {
                     "Client multi-tenant workspace management from a single console",
                     "Custom AI workflow blueprints, automated client reporting, and instant white-label exports"
                   ].map((item, idx) => (
-                    <motion.li 
-                      key={idx} 
+                    <motion.li
+                      key={idx}
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -397,16 +397,16 @@ export const FeaturesPage: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="rounded-2xl overflow-hidden mt-8 relative h-[280px] w-full bg-slate-100 border border-slate-200/50 shadow-sm"
               >
-                <img 
-                  src="/images/image32.webp" 
-                  alt="AI processing workflow and actionable insights pipeline architecture" 
+                <img
+                  src="/images/image32.webp"
+                  alt="AI processing workflow and actionable insights pipeline architecture"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </motion.div>
@@ -416,7 +416,7 @@ export const FeaturesPage: React.FC = () => {
         </div>
 
         {/* Bottom CTA Pill Button */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -425,7 +425,7 @@ export const FeaturesPage: React.FC = () => {
         >
           <button className="group relative flex items-center h-[52px] w-[230px] bg-[#0F172A] rounded-full text-white font-medium text-[15.5px] shadow-sm hover:bg-slate-800 transition-colors overflow-hidden cursor-pointer">
             <div className="absolute left-2 w-9 h-9 rounded-full bg-violet-600 flex items-center justify-center transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:translate-x-[178px]">
-              <ChevronRight className="w-5 h-5 text-white"/>
+              <ChevronRight className="w-5 h-5 text-white" />
             </div>
             <span className="w-full text-center pl-10 pr-2 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:-translate-x-6">
               Get a strategy call

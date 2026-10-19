@@ -53,13 +53,13 @@ export const Testimonials: React.FC = () => {
     // Animate Left Column elements
     if (leftColRef.current) {
       const leftElements = leftColRef.current.children;
-      tl.fromTo(leftElements, 
+      tl.fromTo(leftElements,
         { y: 20, opacity: 0 },
-        { 
-          y: 0, 
-          opacity: 1, 
-          duration: 0.5, 
-          stagger: 0.08, 
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          stagger: 0.08,
           ease: 'power2.out',
           clearProps: 'all'
         }
@@ -85,7 +85,7 @@ export const Testimonials: React.FC = () => {
     const stats = gsap.utils.toArray('.stat-num');
     stats.forEach((stat: any) => {
       const target = parseInt(stat.getAttribute('data-target') || '0', 10);
-      gsap.fromTo(stat, 
+      gsap.fromTo(stat,
         { innerText: 0 },
         {
           innerText: target,
@@ -145,12 +145,12 @@ export const Testimonials: React.FC = () => {
   return (
     <section ref={sectionRef} id="testimonials" className="pt-16 sm:pt-28 pb-12 sm:pb-16 bg-[#F4F5F7] relative overflow-hidden">
       <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
-          
+
           {/* Left Column: Social Proof & Metrics */}
           <div ref={leftColRef} className="lg:col-span-4 flex flex-col justify-center gap-6 sm:gap-8">
-            
+
             {/* Avatar Stack & Stars */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5">
               <div className="flex -space-x-3">
@@ -177,7 +177,7 @@ export const Testimonials: React.FC = () => {
                   <span className="stat-num" data-target="91">0</span>%
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white rounded-[1.25rem] p-5 sm:p-6 flex flex-col items-center justify-center text-center shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-slate-100">
                   <div className="text-[12px] sm:text-[13px] text-slate-400 font-medium mb-2 leading-tight">On-Time Deliveries</div>
@@ -199,14 +199,14 @@ export const Testimonials: React.FC = () => {
           {/* Right Column: Carousel Card */}
           <div ref={rightColRef} className="lg:col-span-8 h-full">
             <div className="bg-white rounded-[1.5rem] sm:rounded-[2rem] p-3 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 h-full flex flex-col md:flex-row items-stretch">
-              
+
               {/* Image Side - Increased height/aspect for portrait view on mobile */}
               <div className="w-full md:w-[45%] lg:w-[42%] relative overflow-hidden rounded-[1.25rem] sm:rounded-[1.5rem] bg-slate-100 aspect-[3/4] sm:aspect-[4/3] md:aspect-auto md:min-h-[440px] shrink-0">
                 <AnimatePresence mode="wait">
-                  <motion.img 
+                  <motion.img
                     key={activeTestimonial.id}
-                    src={activeTestimonial.image} 
-                    alt="Client Testimonial" 
+                    src={activeTestimonial.image}
+                    alt="Client Testimonial"
                     loading="eager"
                     initial={{ opacity: 0, x: 15 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -219,7 +219,7 @@ export const Testimonials: React.FC = () => {
 
               {/* Text Side */}
               <div className="w-full md:w-[55%] lg:w-[58%] flex flex-col justify-between py-6 sm:py-8 px-4 sm:px-8 md:px-10 lg:px-12">
-                
+
                 {/* Responsive container for quote to prevent overlapping & layout shifts */}
                 <div className="relative min-h-[140px] sm:min-h-[200px] md:min-h-[240px] flex items-center my-auto">
                   <AnimatePresence mode="wait">
@@ -237,27 +237,27 @@ export const Testimonials: React.FC = () => {
                     </motion.div>
                   </AnimatePresence>
                 </div>
-                
+
                 {/* Navigation & Counter */}
                 <div className="mt-6 md:mt-8 flex items-center justify-between pt-2">
                   <div className="flex items-center gap-3">
-                    <button 
+                    <button
                       onClick={handlePrev}
                       className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-slate-50 hover:text-slate-900 transition-colors focus:outline-none active:scale-95"
                     >
                       <ChevronLeft className="w-5 h-5" />
                     </button>
-                    <button 
+                    <button
                       onClick={handleNext}
                       className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-slate-50 hover:text-slate-900 transition-colors focus:outline-none active:scale-95"
                     >
                       <ChevronRight className="w-5 h-5" />
                     </button>
                   </div>
-                  
+
                   <div className="text-slate-400 font-medium text-base sm:text-lg flex items-center gap-1 select-none">
-                    <span className="text-slate-900">{activeIndex + 1}</span> 
-                    <span className="text-slate-300 text-xl font-light">/</span> 
+                    <span className="text-slate-900">{activeIndex + 1}</span>
+                    <span className="text-slate-300 text-xl font-light">/</span>
                     <span>{TESTIMONIALS_DATA.length}</span>
                   </div>
                 </div>

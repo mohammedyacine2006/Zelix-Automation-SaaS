@@ -106,7 +106,14 @@ export const Navbar: React.FC = () => {
             transition={{ duration: 0.25, ease: 'easeOut' }}
             className="lg:hidden mt-2 max-w-7xl mx-auto bg-white/95 backdrop-blur-xl border border-slate-200/80 rounded-3xl p-5 shadow-2xl overflow-hidden text-slate-900"
           >
-            <div className="flex flex-col gap-3">
+            <div 
+              className="flex flex-col gap-3"
+              onClick={(e) => {
+                if ((e.target as HTMLElement).closest('a')) {
+                  setMobileMenuOpen(false);
+                }
+              }}
+            >
               
               {/* About Section */}
               <div className="border-b border-slate-100 pb-2">
@@ -174,14 +181,15 @@ export const Navbar: React.FC = () => {
 
               {/* Secondary CTA */}
               <div className="pt-2">
-                <button
+                <a
+                  href="/#pricing"
                   onClick={() => {
                     setMobileMenuOpen(false);
                   }}
-                  className="w-full py-3 rounded-2xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-slate-200 transition-colors"
+                  className="w-full py-3 rounded-2xl bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-slate-200 transition-colors block text-center cursor-pointer"
                 >
                   Book a Demo
-                </button>
+                </a>
               </div>
 
             </div>

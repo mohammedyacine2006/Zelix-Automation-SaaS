@@ -7,7 +7,7 @@
 /* Base resets and text selection styles */
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
-  /* تحسين معالجة السكرول على مستوى المتصفح */
+  /* Optimize scroll handling at the browser level */
   overscroll-behavior: none;
 }
 
@@ -28,7 +28,7 @@ body {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  /* نقل معالجة البلور إلى الـ GPU لمنع تقطيع السكرول */
+  /* Offload blur processing to GPU to prevent scroll stutter */
   will-change: transform;
   transform: translateZ(0);
 }
@@ -44,7 +44,7 @@ body {
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  /* تسريع الأداء عند السكرول فوق الكروت */
+  /* Hardware acceleration for smooth scrolling over cards */
   will-change: transform;
   transform: translateZ(0);
 }

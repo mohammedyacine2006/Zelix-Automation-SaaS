@@ -65,7 +65,7 @@ export const IntegrationsSection: React.FC = () => {
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} className="w-full pt-10 sm:pt-16 pb-16 sm:pb-28 bg-[#F4F5F7] relative overflow-hidden flex flex-col items-center">
+    <section ref={sectionRef} id="integrations" className="w-full pt-10 sm:pt-16 pb-16 sm:pb-28 bg-[#F4F5F7] relative overflow-hidden flex flex-col items-center">
       
       {/* Header */}
       <div className="flex flex-col items-center text-center px-4 mb-4 sm:mb-8 max-w-2xl mx-auto z-10">

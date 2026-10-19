@@ -44,7 +44,7 @@ export default function App() {
 
   const handleBookDemo = () => {
     setIsTransitioning(true);
-    
+
     // Midpoint of transition (curtain is fully covering screen)
     setTimeout(() => {
       document.getElementById('pricing')?.scrollIntoView({ behavior: 'auto' });
@@ -72,7 +72,7 @@ export default function App() {
       lenis.raf(time * 1000);
     };
     gsap.ticker.add(raf);
-    
+
     // Disable core GSAP lag smoothing to prevent stutter with Lenis
     gsap.ticker.lagSmoothing(0);
 
@@ -82,7 +82,7 @@ export default function App() {
     };
   }, []);
 
-  // Client-side routing logic
+  // Client-side routing and smooth navigation logic
   useEffect(() => {
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
@@ -92,23 +92,62 @@ export default function App() {
       setCurrentPath(window.location.pathname);
     };
     window.addEventListener('popstate', handlePopState);
-    
+
     const handleLinkClick = (e: MouseEvent) => {
       const target = (e.target as HTMLElement).closest('a');
-      if (target && target.href && target.href.startsWith(window.location.origin)) {
+      if (!target || !target.href) return;
+      if (target.getAttribute('target') === '_blank') return;
+      if (target.getAttribute('download') !== null) return;
+
+      const rawHref = target.getAttribute('href');
+      if (!rawHref) return;
+
+      // Skip external protocols or non-navigational links
+      if (rawHref.startsWith('mailto:') || rawHref.startsWith('tel:') || rawHref.startsWith('javascript:')) return;
+
+      if (target.href.startsWith(window.location.origin)) {
         const url = new URL(target.href);
-        if (target.getAttribute('target') === '_blank') return;
-        
-        if (url.pathname === window.location.pathname && url.hash) return;
-        
-        if (url.pathname !== window.location.pathname) {
-          e.preventDefault();
-          window.history.pushState(null, '', url.pathname + url.search + url.hash);
-          setCurrentPath(url.pathname);
+        e.preventDefault();
+
+        const isSamePath = url.pathname === window.location.pathname;
+
+        if (isSamePath) {
+          // If on the same page with a hash, smoothly scroll to that anchor
+          if (url.hash) {
+            const targetId = url.hash.replace('#', '');
+            const elem = document.getElementById(targetId);
+            if (elem) {
+              elem.scrollIntoView({ behavior: 'smooth' });
+            }
+            window.history.pushState(null, '', url.pathname + url.search + url.hash);
+          } else {
+            // Clicking current page link again (e.g. clicking About while already on /about)
+            // Smoothly scroll to the top of the page without a full-page reload or 404
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+          return;
+        }
+
+        // Navigating to a different route
+        window.history.pushState(null, '', url.pathname + url.search + url.hash);
+        setCurrentPath(url.pathname);
+
+        if (url.hash) {
+          const targetId = url.hash.replace('#', '');
+          setTimeout(() => {
+            const elem = document.getElementById(targetId);
+            if (elem) {
+              elem.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              window.scrollTo(0, 0);
+            }
+          }, 150);
+        } else {
+          window.scrollTo(0, 0);
         }
       }
     };
-    
+
     document.addEventListener('click', handleLinkClick);
     return () => {
       window.removeEventListener('popstate', handlePopState);
@@ -117,13 +156,13 @@ export default function App() {
   }, []);
 
   const renderContent = () => {
-    if (currentPath === '/auth') {
-      return <AuthPage />;
+    if (currentPath === '/auth' || currentPath === '/login' || currentPath === '/register') {
+      return <AuthPage initialMode={currentPath === '/login' ? 'login' : 'signup'} />;
     }
 
     return (
       <div className="min-h-screen bg-[#F4F5F7] text-slate-900 font-sans transition-colors duration-300">
-        
+
         {/* Sticky Glassmorphism Header Navigation */}
         <Navbar />
 
@@ -158,7 +197,7 @@ export default function App() {
             </>
           )}
         </main>
-        
+
         <Footer />
       </div>
     );
@@ -182,7 +221,7 @@ export default function App() {
         <motion.div key={currentPath} className="flex-1 flex flex-col w-full min-h-screen">
           <ScrollToTop />
           {renderContent()}
-          
+
           {/* Exiting Curtain: Starts below, slides up to cover */}
           <motion.div
             initial={{ y: "100%" }}
@@ -191,7 +230,7 @@ export default function App() {
             transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
             className="fixed inset-0 z-[9999] pointer-events-none bg-[#F4F5F7] will-change-transform transform-gpu"
           />
-          
+
           {/* Entering Curtain: Starts covering, slides up to reveal */}
           <motion.div
             initial={{ y: "0%" }}

@@ -19,7 +19,7 @@ export const TeamPage: React.FC = () => {
   return (
     <div className="pt-32 pb-0 w-full min-h-screen flex flex-col items-center bg-[#F4F5F7]">
       {/* Hero Header Section */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -45,16 +45,16 @@ export const TeamPage: React.FC = () => {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 mb-20 md:mb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 my-10">
           {teamMembers.map((member) => (
-            <motion.div 
-              key={member.id} 
+            <motion.div
+              key={member.id}
               className="relative group cursor-pointer overflow-hidden rounded-[32px]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              <img 
-                src={member.image} 
+              <img
+                src={member.image}
                 alt={member.name}
                 className="aspect-square w-full object-cover shadow-sm transition-transform duration-500 ease-out group-hover:scale-105"
               />
@@ -108,9 +108,9 @@ export const TeamPage: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <img 
-              src="/images/image30.webp" 
-              alt="Workflow Automation" 
+            <img
+              src="/images/image30.webp"
+              alt="Workflow Automation"
               className="w-full h-[280px] sm:h-[380px] md:h-[460px] lg:h-[540px] object-cover object-center rounded-[28px] sm:rounded-[32px] shadow-lg border border-slate-200/60"
             />
           </motion.div>

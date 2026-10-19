@@ -7,9 +7,9 @@ const SlotDigit: React.FC<{ value: string, delay: number }> = ({ value, delay })
   if (!/^\d$/.test(value)) {
     return <span className="inline-block">{value}</span>;
   }
-  
+
   const numValue = parseInt(value);
-  
+
   return (
     <div className="inline-flex relative overflow-hidden align-bottom h-[1em] items-center">
       <span className="invisible block leading-none h-[1em]">{value}</span>
@@ -42,7 +42,7 @@ export const ServicesPage: React.FC = () => {
   return (
     <div className="pt-32 pb-0 w-full min-h-screen flex flex-col items-center bg-[#F4F5F7]">
       {/* Hero Header Section */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -69,9 +69,9 @@ export const ServicesPage: React.FC = () => {
       {/* Main Content Area */}
       <div className="flex-1 w-full pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 py-12">
-          
+
           {/* Card 1 */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -89,7 +89,7 @@ export const ServicesPage: React.FC = () => {
           </motion.div>
 
           {/* Card 2 */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -103,7 +103,7 @@ export const ServicesPage: React.FC = () => {
               </div>
               <h3 className="text-xl font-medium text-[#111827] tracking-tight text-left">Eliminate Manual Workflow Errors</h3>
             </div>
-            
+
             {/* Layer B: Dark Hover Curtain State */}
             <div className="absolute inset-0 p-8 flex flex-col items-center justify-center text-center bg-black text-white z-20 transition-transform duration-[850ms] ease-in-out -translate-y-full group-hover:translate-y-0">
               <div className="bg-white/10 border border-white/20 p-3 rounded-xl text-white mb-4">
@@ -114,7 +114,7 @@ export const ServicesPage: React.FC = () => {
           </motion.div>
 
           {/* Card 3 */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -132,7 +132,7 @@ export const ServicesPage: React.FC = () => {
           </motion.div>
 
           {/* Right Tall Feature Card (Image Card 2) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -154,7 +154,7 @@ export const ServicesPage: React.FC = () => {
           </motion.div>
 
           {/* Card 4 */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -168,7 +168,7 @@ export const ServicesPage: React.FC = () => {
               </div>
               <h3 className="text-xl font-medium text-[#111827] tracking-tight text-left">Focus on High-Impact Strategic Work</h3>
             </div>
-            
+
             {/* Layer B: Dark Hover Curtain State */}
             <div className="absolute inset-0 p-8 flex flex-col items-center justify-center text-center bg-black text-white z-20 transition-transform duration-[850ms] ease-in-out -translate-y-full group-hover:translate-y-0">
               <div className="bg-white/10 border border-white/20 p-3 rounded-xl text-white mb-4">
@@ -179,7 +179,7 @@ export const ServicesPage: React.FC = () => {
           </motion.div>
 
           {/* Card 5 (Image Card 1) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -191,7 +191,7 @@ export const ServicesPage: React.FC = () => {
           </motion.div>
 
           {/* Card 6 */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -205,7 +205,7 @@ export const ServicesPage: React.FC = () => {
               </div>
               <h3 className="text-xl font-medium text-[#111827] tracking-tight text-left">Scale Operations Without Bloating Headcount</h3>
             </div>
-            
+
             {/* Layer B: Dark Hover Curtain State */}
             <div className="absolute inset-0 p-8 flex flex-col items-center justify-center text-center bg-black text-white z-20 transition-transform duration-[850ms] ease-in-out -translate-y-full group-hover:translate-y-0">
               <div className="bg-white/10 border border-white/20 p-3 rounded-xl text-white mb-4">
@@ -220,14 +220,14 @@ export const ServicesPage: React.FC = () => {
         {/* Feature Showcase Section */}
         <section className="w-full py-16 lg:py-28 bg-[#F4F5F7] text-[#0f172a]">
           <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            
+
             {/* LEFT COLUMN: DASHBOARD COMPOSITE */}
             <div className="lg:col-span-6 w-full flex justify-center lg:justify-start">
-              
+
               <div className="relative w-full max-w-md sm:max-w-xl lg:max-w-none grid grid-cols-1 md:grid-cols-2 lg:block gap-4 sm:gap-6">
-                
+
                 {/* Base Card (Balances & Profile) */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
@@ -238,7 +238,7 @@ export const ServicesPage: React.FC = () => {
                   <div className="text-3xl sm:text-4xl font-medium text-[#7c3aed] tracking-tight mt-2 mb-6">
                     <SlotCounter value="$ 9,784.79" />
                   </div>
-                  
+
                   <div className="flex items-center gap-4 mt-6 mb-6 border-b border-slate-100 pb-6">
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="Robert Foster" className="w-12 h-12 rounded-full object-cover" />
                     <div>
@@ -262,9 +262,9 @@ export const ServicesPage: React.FC = () => {
 
                 {/* Right Container for Overlay Cards in Tablet view */}
                 <div className="flex flex-col gap-4 sm:gap-6 md:col-span-1 lg:contents">
-                  
+
                   {/* Floating Overlay Card 1 (Transaction Stats Card) */}
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
@@ -296,7 +296,7 @@ export const ServicesPage: React.FC = () => {
                         { day: 'S', height: '30%' },
                       ].map((item, index) => (
                         <div key={index} className="flex flex-col items-center gap-2 h-full justify-end flex-1">
-                          <motion.div 
+                          <motion.div
                             className="w-2.5 rounded-full bg-gradient-to-t from-emerald-400 to-cyan-400 origin-bottom"
                             initial={{ height: "0%", scaleY: 0 }}
                             whileInView={{ height: item.height, scaleY: 1 }}
@@ -310,7 +310,7 @@ export const ServicesPage: React.FC = () => {
                   </motion.div>
 
                   {/* Floating Overlay Card 2 (Target Reached Semi-Circle Card) */}
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
@@ -321,32 +321,32 @@ export const ServicesPage: React.FC = () => {
                       <p className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">Target Reached</p>
                     </div>
                     <div className="relative w-full h-28 flex flex-col items-center justify-end overflow-hidden mb-4">
-                       <svg viewBox="0 0 100 50" className="w-40 h-20 absolute bottom-0">
-                         <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#f1f5f9" strokeWidth="8" strokeLinecap="round" />
-                         <motion.path 
-                           d="M 10 50 A 40 40 0 0 1 90 50" 
-                           fill="none" 
-                           stroke="url(#purpleGradient)" 
-                           strokeWidth="8" 
-                           strokeLinecap="round" 
-                           strokeDasharray="125" 
-                           initial={{ strokeDashoffset: 125 }}
-                           whileInView={{ strokeDashoffset: 31.25 }}
-                           viewport={{ once: true, margin: "-50px" }}
-                           transition={{ duration: 1.5, ease: "easeInOut", delay: 0.4 }}
-                         />
-                         <defs>
-                           <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                             <stop offset="0%" stopColor="#9333ea" />
-                             <stop offset="100%" stopColor="#818cf8" />
-                           </linearGradient>
-                         </defs>
-                       </svg>
-                       <div className="absolute bottom-1 flex flex-col items-center">
-                         <div className="text-3xl font-bold text-slate-900 leading-none">
-                           <SlotCounter value="75%" delay={0.4} />
-                         </div>
-                       </div>
+                      <svg viewBox="0 0 100 50" className="w-40 h-20 absolute bottom-0">
+                        <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#f1f5f9" strokeWidth="8" strokeLinecap="round" />
+                        <motion.path
+                          d="M 10 50 A 40 40 0 0 1 90 50"
+                          fill="none"
+                          stroke="url(#purpleGradient)"
+                          strokeWidth="8"
+                          strokeLinecap="round"
+                          strokeDasharray="125"
+                          initial={{ strokeDashoffset: 125 }}
+                          whileInView={{ strokeDashoffset: 31.25 }}
+                          viewport={{ once: true, margin: "-50px" }}
+                          transition={{ duration: 1.5, ease: "easeInOut", delay: 0.4 }}
+                        />
+                        <defs>
+                          <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stopColor="#9333ea" />
+                            <stop offset="100%" stopColor="#818cf8" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <div className="absolute bottom-1 flex flex-col items-center">
+                        <div className="text-3xl font-bold text-slate-900 leading-none">
+                          <SlotCounter value="75%" delay={0.4} />
+                        </div>
+                      </div>
                     </div>
                     <div className="flex flex-col gap-3">
                       <div className="bg-[#fef08a] py-2.5 rounded-xl text-center w-full">
@@ -372,11 +372,11 @@ export const ServicesPage: React.FC = () => {
                 </div>
                 <span className="text-sm font-medium text-[#111827]">Data Integrations</span>
               </div>
-              
+
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-slate-900 leading-[1.15] tracking-tight mb-6">
                 A clear vision is essential for understanding wealth dynamics.
               </h2>
-              
+
               <p className="text-slate-600 text-base sm:text-lg font-normal leading-relaxed mb-8 max-w-xl">
                 A clear vision is essential for understanding wealth dynamics because it provides direction, purpose, and clarity in navigating financial growth and sustainability.
               </p>
@@ -404,14 +404,14 @@ export const ServicesPage: React.FC = () => {
 
               <button className="group relative flex items-center h-[52px] w-[220px] bg-[#0F172A] rounded-full text-white font-medium text-[15.5px] shadow-sm hover:bg-slate-800 transition-colors overflow-hidden cursor-pointer">
                 <div className="absolute left-2 w-9 h-9 rounded-full bg-violet-600 flex items-center justify-center transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:translate-x-[168px]">
-                  <ChevronRight className="w-5 h-5 text-white"/>
+                  <ChevronRight className="w-5 h-5 text-white" />
                 </div>
                 <span className="w-full text-center pl-10 pr-2 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:-translate-x-6">
                   Start your journey
                 </span>
               </button>
             </div>
-            
+
           </div>
         </section>
 

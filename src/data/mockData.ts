@@ -85,7 +85,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     priceAnnual: 24,
     features: [
       'Up to 250,000 AI Agent Executions / mo',
-      'Gemini 2.5 Flash Inference API Access',
+      'Ultra-Fast LLM Inference API Access',
       '3 Autonomous Agent Workflows',
       '10 GB Vector Database RAG Storage',
       'Community Slack & Email Support',
@@ -104,7 +104,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     priceAnnual: 71,
     features: [
       'Up to 2,500,000 AI Agent Executions / mo',
-      'Gemini 2.5 Flash & Pro Full Multi-Modal Suite',
+      'Multi-Modal LLM Suite (OpenAI, Anthropic & Gemini)',
       'Unlimited Visual Workflow Studio Pipelines',
       '100 GB Vector Database RAG Storage',
       'SOC2 Type II Security Guardrails & PII Masking',

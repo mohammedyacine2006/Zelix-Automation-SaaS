@@ -64,11 +64,11 @@ export const Footer: React.FC = () => {
               Company
             </h4>
             <ul className="space-y-3 sm:space-y-4 text-xs sm:text-sm text-slate-500">
-              <li><a href="#" className="hover:text-slate-900 transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Career</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Why Choose Us</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Our Manifesto</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Contact Us</a></li>
+              <li><a href="/about" className="hover:text-slate-900 transition-colors">About Us</a></li>
+              <li><a href="/team" className="hover:text-slate-900 transition-colors">Career & Team</a></li>
+              <li><a href="/features" className="hover:text-slate-900 transition-colors">Why Choose Us</a></li>
+              <li><a href="/about" className="hover:text-slate-900 transition-colors">Our Manifesto</a></li>
+              <li><a href="/contact" className="hover:text-slate-900 transition-colors">Contact Us</a></li>
             </ul>
           </div>
 
@@ -78,10 +78,10 @@ export const Footer: React.FC = () => {
               Support
             </h4>
             <ul className="space-y-3 sm:space-y-4 text-xs sm:text-sm text-slate-500">
-              <li><a href="#" className="hover:text-slate-900 transition-colors">FAQ</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Documentation</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Tutorial</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Support</a></li>
+              <li><a href="/#faqs" className="hover:text-slate-900 transition-colors">FAQ</a></li>
+              <li><a href="/features" className="hover:text-slate-900 transition-colors">Documentation</a></li>
+              <li><a href="/blog" className="hover:text-slate-900 transition-colors">Tutorials & Blog</a></li>
+              <li><a href="/contact" className="hover:text-slate-900 transition-colors">Support</a></li>
             </ul>
           </div>
 
@@ -91,11 +91,11 @@ export const Footer: React.FC = () => {
               Legal Policies
             </h4>
             <ul className="space-y-3 sm:space-y-4 text-xs sm:text-sm text-slate-500">
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Terms & Conditions</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Refund Policy</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">GDPR Compliance</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Affiliate Policy</a></li>
+              <li><a href="/contact" className="hover:text-slate-900 transition-colors">Terms & Conditions</a></li>
+              <li><a href="/contact" className="hover:text-slate-900 transition-colors">Privacy Policy</a></li>
+              <li><a href="/#pricing" className="hover:text-slate-900 transition-colors">Refund Policy</a></li>
+              <li><a href="/about" className="hover:text-slate-900 transition-colors">GDPR Compliance</a></li>
+              <li><a href="/contact" className="hover:text-slate-900 transition-colors">Affiliate Policy</a></li>
             </ul>
           </div>
         </div>
@@ -104,9 +104,9 @@ export const Footer: React.FC = () => {
         <div className="border-t border-slate-200/80 mt-8 sm:mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 font-medium gap-3 sm:gap-0">
           <p>© 2026 Zelix. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-slate-900 transition-colors">Privacy Policy</a>
+            <a href="/contact" className="hover:text-slate-900 transition-colors">Privacy Policy</a>
             <span>•</span>
-            <a href="#" className="hover:text-slate-900 transition-colors">Terms of Service</a>
+            <a href="/contact" className="hover:text-slate-900 transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

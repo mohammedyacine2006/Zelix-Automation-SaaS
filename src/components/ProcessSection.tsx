@@ -76,19 +76,19 @@ const ConnectAppsOverlay = () => {
   return (
     <div className="flex flex-col gap-2">
       <svg className="w-full h-6 sm:h-8" viewBox="0 0 400 40" preserveAspectRatio="none">
-        <motion.path 
-          d="M0 20 C 50 -10, 150 50, 250 20 C 320 0, 380 30, 400 20" 
-          fill="none" 
-          stroke="rgba(255,255,255,0.8)" 
+        <motion.path
+          d="M0 20 C 50 -10, 150 50, 250 20 C 320 0, 380 30, 400 20"
+          fill="none"
+          stroke="rgba(255,255,255,0.8)"
           strokeWidth="2"
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
         />
-        <motion.path 
-          d="M0 20 C 80 40, 180 -10, 280 30 C 350 40, 390 10, 400 20" 
-          fill="none" 
-          stroke="rgba(255,255,255,0.4)" 
+        <motion.path
+          d="M0 20 C 80 40, 180 -10, 280 30 C 350 40, 390 10, 400 20"
+          fill="none"
+          stroke="rgba(255,255,255,0.4)"
           strokeWidth="1.5"
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
@@ -116,7 +116,7 @@ const ConnectAppsOverlay = () => {
   );
 };
 
-// **تصحيح مشكلة ارتفاع الكارت رقم 2**
+// Overlay configuration for step 2
 const BuildFlowsOverlay = () => {
   return (
     <div className="flex flex-col gap-1 relative py-1 sm:py-2">
@@ -124,10 +124,10 @@ const BuildFlowsOverlay = () => {
       <div className="text-white text-xl sm:text-2xl font-bold leading-none">85.4%</div>
       <div className="h-8 sm:h-12 w-full mt-1 relative">
         <svg className="w-full h-full" viewBox="0 0 400 100" preserveAspectRatio="none">
-          <motion.path 
-            d="M0 80 C 50 80, 80 20, 120 40 C 160 60, 200 80, 250 50 C 300 20, 350 60, 400 30" 
-            fill="none" 
-            stroke="white" 
+          <motion.path
+            d="M0 80 C 50 80, 80 20, 120 40 C 160 60, 200 80, 250 50 C 300 20, 350 60, 400 30"
+            fill="none"
+            stroke="white"
             strokeWidth="3"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
@@ -136,8 +136,8 @@ const BuildFlowsOverlay = () => {
         </svg>
       </div>
       <div className="flex -space-x-2 mt-1">
-        {[1,2,3,4].map((id) => (
-          <img key={id} src={`https://i.pravatar.cc/100?img=${id+10}`} alt="User" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-[1.5px] border-white/60 shadow-md object-cover" />
+        {[1, 2, 3, 4].map((id) => (
+          <img key={id} src={`https://i.pravatar.cc/100?img=${id + 10}`} alt="User" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-[1.5px] border-white/60 shadow-md object-cover" />
         ))}
       </div>
     </div>
@@ -155,7 +155,7 @@ const TestOptimizeOverlay = () => {
         {Array.from({ length: 18 }).map((_, i) => {
           const height = 20 + Math.random() * 80;
           return (
-            <motion.div 
+            <motion.div
               key={i}
               className="w-1 sm:w-1.5 bg-gradient-to-t from-violet-900 via-purple-500 to-orange-400"
               initial={{ height: 0 }}
@@ -269,9 +269,9 @@ export const ProcessSection: React.FC = () => {
   };
 
   return (
-    <section ref={sectionRef} className="w-full py-16 sm:py-24 lg:py-32 bg-[#F4F5F7] relative overflow-hidden">
+    <section ref={sectionRef} id="process" className="w-full py-16 sm:py-24 lg:py-32 bg-[#F4F5F7] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header Block */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-6 md:gap-8">
           <div className="max-w-2xl">
@@ -293,7 +293,7 @@ export const ProcessSection: React.FC = () => {
         {/* Main Container Card */}
         <div className="process-main-card bg-white rounded-2xl sm:rounded-[2rem] border border-slate-200 p-4 sm:p-8 lg:p-10 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-stretch">
-            
+
             {/* Left: Synchronized Image & Overlays */}
             <div className="lg:col-span-6 relative h-[280px] sm:h-[380px] md:h-[420px] lg:h-auto min-h-[300px] lg:min-h-[460px] rounded-xl sm:rounded-2xl overflow-hidden bg-slate-100">
               {processSteps.map((step, index) => {
@@ -301,9 +301,8 @@ export const ProcessSection: React.FC = () => {
                 return (
                   <div
                     key={step.id}
-                    className={`absolute inset-0 w-full h-full rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-700 ease-in-out ${
-                      isActive ? "opacity-100 z-10 scale-100" : "opacity-0 z-0 scale-105 pointer-events-none"
-                    }`}
+                    className={`absolute inset-0 w-full h-full rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-700 ease-in-out ${isActive ? "opacity-100 z-10 scale-100" : "opacity-0 z-0 scale-105 pointer-events-none"
+                      }`}
                   >
                     <img
                       src={step.image}
@@ -311,12 +310,11 @@ export const ProcessSection: React.FC = () => {
                       className="absolute inset-0 w-full h-full object-cover"
                       alt={step.title}
                     />
-                    
+
                     {/* Glassmorphic Overlay */}
                     <div
-                      className={`absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 backdrop-blur-xl bg-white/30 border border-white/40 shadow-2xl rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-500 ease-in-out ${
-                        isActive ? "opacity-100 translate-y-0 delay-200" : "opacity-0 translate-y-4"
-                      }`}
+                      className={`absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 backdrop-blur-xl bg-white/30 border border-white/40 shadow-2xl rounded-xl sm:rounded-2xl p-3 sm:p-4 transition-all duration-500 ease-in-out ${isActive ? "opacity-100 translate-y-0 delay-200" : "opacity-0 translate-y-4"
+                        }`}
                     >
                       {index === 0 && <ConnectAppsOverlay />}
                       {index === 1 && <BuildFlowsOverlay />}
@@ -330,7 +328,7 @@ export const ProcessSection: React.FC = () => {
 
             {/* Right: Text & Stepper */}
             <div className="lg:col-span-6 flex gap-3 sm:gap-6 lg:gap-8 min-h-[360px] sm:min-h-[400px] lg:min-h-[460px] flex-row">
-              
+
               {/* Vertical Animated Text Container */}
               <div className="flex-1 relative overflow-hidden h-full flex flex-col justify-between py-2 sm:py-4">
                 <AnimatePresence initial={false} custom={direction} mode="wait">
@@ -370,32 +368,31 @@ export const ProcessSection: React.FC = () => {
               {/* Vertical Stepper with Circular Progress Ring */}
               <div className="w-10 sm:w-12 flex flex-col justify-between items-center relative py-2 sm:py-6 z-20 bg-white">
                 <div className="absolute top-6 bottom-6 w-[1px] bg-slate-100 left-1/2 -translate-x-1/2" />
-                
+
                 {processSteps.map((step, idx) => {
                   const isActive = idx === currentStep;
                   return (
-                    <div 
+                    <div
                       key={step.id}
                       className="step-indicator relative z-10 cursor-pointer group flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12"
                       onClick={() => handleStepClick(idx)}
                     >
-                      <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-[10px] sm:text-xs font-semibold transition-all duration-500 ${
-                        isActive 
-                          ? 'bg-[#0F172A] text-white scale-110 shadow-md' 
+                      <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-[10px] sm:text-xs font-semibold transition-all duration-500 ${isActive
+                          ? 'bg-[#0F172A] text-white scale-110 shadow-md'
                           : 'bg-white text-slate-400 border border-slate-200 group-hover:border-slate-400 group-hover:text-slate-600'
-                      }`}>
+                        }`}>
                         0{step.id}
                       </div>
-                      
+
                       {isActive && (
                         <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none" viewBox="0 0 48 48">
-                          <motion.circle 
+                          <motion.circle
                             key={`circle-${step.id}-${currentStep}`}
-                            cx="24" 
-                            cy="24" 
-                            r="21" 
-                            fill="none" 
-                            stroke="#0F172A" 
+                            cx="24"
+                            cy="24"
+                            r="21"
+                            fill="none"
+                            stroke="#0F172A"
                             strokeWidth="2"
                             strokeDasharray="131.9"
                             initial={{ strokeDashoffset: 131.9 }}
@@ -408,11 +405,11 @@ export const ProcessSection: React.FC = () => {
                   );
                 })}
               </div>
-              
+
             </div>
           </div>
         </div>
-        
+
       </div>
     </section>
   );

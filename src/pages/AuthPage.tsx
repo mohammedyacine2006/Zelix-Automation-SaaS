@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, ChevronRight } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
@@ -7,15 +7,23 @@ import { Footer } from '../components/Footer';
 // Official Google Icon SVG
 const GoogleIcon = () => (
   <svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
+    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
   </svg>
 );
 
-export const AuthPage: React.FC = () => {
-  const [isLogin, setIsLogin] = useState(false);
+interface AuthPageProps {
+  initialMode?: 'login' | 'signup';
+}
+
+export const AuthPage: React.FC<AuthPageProps> = ({ initialMode = 'signup' }) => {
+  const [isLogin, setIsLogin] = useState(initialMode === 'login');
+
+  useEffect(() => {
+    setIsLogin(initialMode === 'login');
+  }, [initialMode]);
 
   const toggleAuthMode = () => setIsLogin(!isLogin);
 
@@ -24,10 +32,10 @@ export const AuthPage: React.FC = () => {
       <Navbar />
 
       <div className="flex-1 flex flex-col items-center p-3 sm:p-6 lg:p-8 pt-24 sm:pt-28 lg:pt-32 pb-12 w-full mx-auto max-w-[1100px]">
-        
+
         {/* Header Section */}
         <div className="flex flex-col items-center mb-8 sm:mb-12 gap-3 sm:gap-5 w-full">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -38,8 +46,8 @@ export const AuthPage: React.FC = () => {
             </div>
             <span className="text-slate-900 font-medium text-xs sm:text-base">{isLogin ? 'Sign In' : 'Sign Up'}</span>
           </motion.div>
-          
-          <motion.h2 
+
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -47,8 +55,8 @@ export const AuthPage: React.FC = () => {
           >
             {isLogin ? 'Welcome back' : 'Create an account'}
           </motion.h2>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -59,7 +67,7 @@ export const AuthPage: React.FC = () => {
         </div>
 
         {/* Main Split Container with Background Image (No Overlay) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40, scale: 0.98 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
@@ -71,7 +79,7 @@ export const AuthPage: React.FC = () => {
 
               {/* Form Elements */}
               <form className="flex flex-col gap-3.5 sm:gap-4" onSubmit={(e) => e.preventDefault()}>
-                
+
                 <AnimatePresence mode="popLayout">
                   {!isLogin && (
                     <motion.div
@@ -82,8 +90,8 @@ export const AuthPage: React.FC = () => {
                       className="flex flex-col gap-1 sm:gap-1.5 overflow-hidden"
                     >
                       <label className="text-xs sm:text-sm font-medium text-slate-700">Username</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         placeholder="johndoe"
                         className="bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-3.5 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all placeholder:text-slate-400"
                       />
@@ -93,8 +101,8 @@ export const AuthPage: React.FC = () => {
 
                 <div className="flex flex-col gap-1 sm:gap-1.5">
                   <label className="text-xs sm:text-sm font-medium text-slate-700">Email Address</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     placeholder="john@example.com"
                     className="bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-3.5 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all placeholder:text-slate-400"
                   />
@@ -104,11 +112,11 @@ export const AuthPage: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <label className="text-xs sm:text-sm font-medium text-slate-700">Password</label>
                     {isLogin && (
-                      <a href="#" className="text-[11px] sm:text-xs font-semibold text-violet-600 hover:text-violet-700 transition-colors">Forgot password?</a>
+                      <button type="button" onClick={() => alert('Password reset instructions have been sent to your email.')} className="text-[11px] sm:text-xs font-semibold text-violet-600 hover:text-violet-700 transition-colors cursor-pointer">Forgot password?</button>
                     )}
                   </div>
-                  <input 
-                    type="password" 
+                  <input
+                    type="password"
                     placeholder="••••••••"
                     className="bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-3.5 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all placeholder:text-slate-400"
                   />
@@ -124,8 +132,8 @@ export const AuthPage: React.FC = () => {
                       className="flex flex-col gap-1 sm:gap-1.5 overflow-hidden"
                     >
                       <label className="text-xs sm:text-sm font-medium text-slate-700">Confirm Password</label>
-                      <input 
-                        type="password" 
+                      <input
+                        type="password"
                         placeholder="••••••••"
                         className="bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-3.5 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all placeholder:text-slate-400"
                       />
@@ -134,7 +142,7 @@ export const AuthPage: React.FC = () => {
                 </AnimatePresence>
 
                 {/* Primary Action Button - Animated & Compact */}
-                <motion.button 
+                <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="group relative flex items-center justify-center h-[46px] sm:h-[52px] w-full max-w-[220px] bg-[#0F172A] rounded-full text-white font-medium text-xs sm:text-[15.5px] shadow-sm hover:bg-slate-800 transition-colors overflow-hidden mx-auto mt-2 sm:mt-4 cursor-pointer"
@@ -180,9 +188,9 @@ export const AuthPage: React.FC = () => {
           {/* Right Side: Clean Modern Typography Showcase */}
           <div className="w-full lg:w-[50%] hidden lg:flex flex-col relative overflow-hidden p-12 xl:p-16 text-white justify-center z-10">
             <div className="relative z-10 flex flex-col h-full justify-center max-w-md mx-auto">
-              
+
               {/* Social Proof Badge */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
@@ -199,17 +207,17 @@ export const AuthPage: React.FC = () => {
               </motion.div>
 
               {/* Headline */}
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="text-4xl xl:text-5xl font-bold tracking-tight leading-[1.15] mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-300"
               >
-                Build & Scale AI<br/>Workflows 10x Faster
+                Build & Scale AI<br />Workflows 10x Faster
               </motion.h1>
 
               {/* Subtitle */}
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}

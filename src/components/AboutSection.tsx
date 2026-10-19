@@ -18,7 +18,7 @@ export const AboutSection = () => {
   
   const statsContainerRef = useRef<HTMLDivElement>(null);
 
-  // حالة لتتبع اكتمال التحميل المسبق للصور
+  // State to track image preloading completion
   const [leftLoaded, setLeftLoaded] = useState(false);
   const [rightLoaded, setRightLoaded] = useState(false);
 
@@ -68,7 +68,7 @@ export const AboutSection = () => {
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} className="bg-[#F4F5F7] w-full pt-10 pb-20 relative z-20">
+    <section ref={sectionRef} id="about-section" className="bg-[#F4F5F7] w-full pt-10 pb-20 relative z-20">
       <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
           
@@ -82,8 +82,8 @@ export const AboutSection = () => {
               alt="Diverse tech team taking a cheerful selfie outdoors" 
               width={800}
               height={1000}
-              loading="eager" // حظر الـ Lazy loading باش تتيليشارجا ملول
-              decoding="async" // إخراج عملية فك التشفير خارج الـ Main Thread
+              loading="eager" // Prioritize eager loading for key visual asset
+              decoding="async" // Offload image decoding from main UI thread
               onLoad={() => setLeftLoaded(true)}
               className={`w-full h-full object-cover object-center transition-opacity duration-500 ${
                 leftLoaded ? 'opacity-100' : 'opacity-0'
@@ -159,7 +159,7 @@ export const AboutSection = () => {
                   alt="Two creative women collaborating over smartphones" 
                   width={800}
                   height={600}
-                  loading="eager" // تحميل مسبق عاجل
+                  loading="eager" // Eager preload
                   decoding="async"
                   onLoad={() => setRightLoaded(true)}
                   className={`w-full h-full object-cover object-center transition-opacity duration-500 ${

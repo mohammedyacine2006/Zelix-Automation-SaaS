@@ -6,9 +6,9 @@ import CTASection from '../components/CTASection';
 export const ContactPage: React.FC = () => {
   return (
     <div className="pt-24 sm:pt-32 pb-0 w-full min-h-screen flex flex-col items-center bg-[#F4F5F7] overflow-x-hidden">
-      
+
       {/* Hero Header Section */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -36,12 +36,12 @@ export const ContactPage: React.FC = () => {
       {/* Main Content Area */}
       <div className="flex-1 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-12">
-          
+
           {/* Left Column: Contact Info Cards */}
           <div className="lg:col-span-4 flex flex-col gap-4 sm:gap-6">
-            
+
             {/* Card 1: Address */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -59,7 +59,7 @@ export const ContactPage: React.FC = () => {
             </motion.div>
 
             {/* Card 2: Email */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -77,7 +77,7 @@ export const ContactPage: React.FC = () => {
             </motion.div>
 
             {/* Card 3: Call */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -97,7 +97,7 @@ export const ContactPage: React.FC = () => {
           </div>
 
           {/* Right Column: Contact Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -106,24 +106,24 @@ export const ContactPage: React.FC = () => {
           >
             <div className="bg-white p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl shadow-sm border border-slate-100 flex flex-col gap-5 sm:gap-6">
               <form className="flex flex-col gap-4 sm:gap-6" onSubmit={(e) => e.preventDefault()}>
-                
+
                 {/* Row 1: Name & Number */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   <div className="flex flex-col gap-1.5 sm:gap-2">
                     <label htmlFor="name" className="text-xs sm:text-sm font-medium text-slate-700">Your name</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       id="name"
-                      placeholder="e.g. Alex Morgan" 
+                      placeholder="e.g. Alex Morgan"
                       className="bg-white border border-slate-200 text-xs sm:text-sm px-4 sm:px-5 py-3 sm:py-3.5 rounded-full placeholder:text-slate-400 focus:ring-2 focus:ring-slate-900/10 focus:border-slate-400 outline-none w-full transition-all"
                     />
                   </div>
                   <div className="flex flex-col gap-1.5 sm:gap-2">
                     <label htmlFor="number" className="text-xs sm:text-sm font-medium text-slate-700">Your phone number</label>
-                    <input 
-                      type="tel" 
+                    <input
+                      type="tel"
                       id="number"
-                      placeholder="e.g. +1 (555) 000-0000" 
+                      placeholder="e.g. +1 (555) 000-0000"
                       className="bg-white border border-slate-200 text-xs sm:text-sm px-4 sm:px-5 py-3 sm:py-3.5 rounded-full placeholder:text-slate-400 focus:ring-2 focus:ring-slate-900/10 focus:border-slate-400 outline-none w-full transition-all"
                     />
                   </div>
@@ -132,10 +132,10 @@ export const ContactPage: React.FC = () => {
                 {/* Row 2: Email */}
                 <div className="flex flex-col gap-1.5 sm:gap-2">
                   <label htmlFor="email" className="text-xs sm:text-sm font-medium text-slate-700">Work email</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     id="email"
-                    placeholder="e.g. alex@company.com" 
+                    placeholder="e.g. alex@company.com"
                     className="bg-white border border-slate-200 text-xs sm:text-sm px-4 sm:px-5 py-3 sm:py-3.5 rounded-full placeholder:text-slate-400 focus:ring-2 focus:ring-slate-900/10 focus:border-slate-400 outline-none w-full transition-all"
                   />
                 </div>
@@ -143,10 +143,10 @@ export const ContactPage: React.FC = () => {
                 {/* Row 3: Subject */}
                 <div className="flex flex-col gap-1.5 sm:gap-2">
                   <label htmlFor="subject" className="text-xs sm:text-sm font-medium text-slate-700">How can we help?</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     id="subject"
-                    placeholder="e.g. Custom AI Workflow Integration" 
+                    placeholder="e.g. Custom AI Workflow Integration"
                     className="bg-white border border-slate-200 text-xs sm:text-sm px-4 sm:px-5 py-3 sm:py-3.5 rounded-full placeholder:text-slate-400 focus:ring-2 focus:ring-slate-900/10 focus:border-slate-400 outline-none w-full transition-all"
                   />
                 </div>
@@ -154,9 +154,9 @@ export const ContactPage: React.FC = () => {
                 {/* Row 4: Message */}
                 <div className="flex flex-col gap-1.5 sm:gap-2">
                   <label htmlFor="message" className="text-xs sm:text-sm font-medium text-slate-700">Message</label>
-                  <textarea 
+                  <textarea
                     id="message"
-                    placeholder="Tell us about your current processes and automation goals..." 
+                    placeholder="Tell us about your current processes and automation goals..."
                     className="bg-white border border-slate-200 text-xs sm:text-sm p-4 sm:p-5 rounded-xl sm:rounded-2xl placeholder:text-slate-400 focus:ring-2 focus:ring-slate-900/10 focus:border-slate-400 outline-none w-full min-h-[130px] sm:min-h-[160px] resize-y transition-all"
                   ></textarea>
                 </div>
@@ -164,9 +164,9 @@ export const ContactPage: React.FC = () => {
                 {/* Row 5: Terms */}
                 <div className="flex items-start sm:items-center gap-2.5 sm:gap-3 mt-1 sm:mt-2">
                   <div className="relative flex items-center shrink-0 mt-0.5 sm:mt-0">
-                    <input 
-                      type="checkbox" 
-                      id="terms" 
+                    <input
+                      type="checkbox"
+                      id="terms"
                       className="peer h-4 w-4 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-900 checked:bg-slate-900 transition-all"
                     />
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-0 peer-checked:opacity-100 transition-opacity text-white">
@@ -176,13 +176,13 @@ export const ContactPage: React.FC = () => {
                     </div>
                   </div>
                   <label htmlFor="terms" className="text-xs sm:text-sm text-slate-500 cursor-pointer leading-snug">
-                    I agree with the <a href="#" className="text-[#6366f1] hover:text-[#4f46e5] underline underline-offset-2 transition-colors">terms and conditions and privacy policy</a>
+                    I agree with the <a href="/contact" className="text-[#6366f1] hover:text-[#4f46e5] underline underline-offset-2 transition-colors">terms and conditions and privacy policy</a>
                   </label>
                 </div>
 
                 {/* Row 6: Submit Button */}
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="w-full bg-[#111827] hover:bg-black text-white font-medium py-3.5 sm:py-4 rounded-full transition-all duration-300 text-xs sm:text-sm tracking-wide shadow-md hover:shadow-lg mt-1 sm:mt-2"
                 >
                   Send Message
@@ -190,11 +190,11 @@ export const ContactPage: React.FC = () => {
               </form>
             </div>
           </motion.div>
-          
+
         </div>
 
         {/* Map Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30, scale: 0.95 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}

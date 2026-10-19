@@ -26,7 +26,7 @@ export const MegaMenu: React.FC = () => {
           
           {/* Col 1 */}
           <div className="flex flex-col gap-1 lg:gap-1 border-b lg:border-b-0 border-slate-100 pb-2 lg:pb-0 mb-2 lg:mb-0">
-            <a href="/vision" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+            <a href="/about" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
               <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                 <Edit3 className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
               </div>
@@ -36,7 +36,7 @@ export const MegaMenu: React.FC = () => {
               </div>
             </a>
             
-            <a href="/leadership" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+            <a href="/team" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
               <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                 <Users className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
               </div>
@@ -46,7 +46,7 @@ export const MegaMenu: React.FC = () => {
               </div>
             </a>
             
-            <a href="/offerings" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+            <a href="/services" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
               <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                 <Settings className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
               </div>
@@ -56,7 +56,7 @@ export const MegaMenu: React.FC = () => {
               </div>
             </a>
             
-            <a href="/company" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+            <a href="/about" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
               <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                 <Info className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
               </div>
@@ -69,7 +69,7 @@ export const MegaMenu: React.FC = () => {
           
           {/* Col 2 */}
           <div className="flex flex-col gap-1 lg:gap-1 border-b lg:border-b-0 border-slate-100 pb-2 lg:pb-0 mb-2 lg:mb-0">
-            <a href="/why-zelix" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+            <a href="/about" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
               <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                 <HelpCircle className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
               </div>
@@ -79,7 +79,7 @@ export const MegaMenu: React.FC = () => {
               </div>
             </a>
             
-            <a href="/careers" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+            <a href="/contact" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
               <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                 <Briefcase className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
               </div>
@@ -89,7 +89,7 @@ export const MegaMenu: React.FC = () => {
               </div>
             </a>
             
-            <a href="/stories" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+            <a href="/#testimonials" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
               <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                 <Clipboard className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
               </div>
@@ -99,7 +99,7 @@ export const MegaMenu: React.FC = () => {
               </div>
             </a>
             
-            <a href="/uses" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+            <a href="/features" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
               <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                 <Lightbulb className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
               </div>
@@ -112,7 +112,7 @@ export const MegaMenu: React.FC = () => {
           
           {/* Col 3 */}
           <div className="flex flex-col gap-1 lg:gap-1">
-            <a href="/success" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+            <a href="/#testimonials" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
               <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                 <MessageSquare className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
               </div>
@@ -122,7 +122,7 @@ export const MegaMenu: React.FC = () => {
               </div>
             </a>
             
-            <a href="/use-cases" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
+            <a href="/features" className="group/item flex items-start gap-3.5 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl hover:bg-slate-100/80 lg:hover:bg-slate-50/80 transition-all cursor-pointer">
               <div className="border border-slate-200 rounded-lg p-2 text-slate-500 group-hover/item:text-slate-900 bg-white transition-colors shrink-0 shadow-sm lg:shadow-none">
                 <Search className="w-4 h-4 lg:w-5 lg:h-5 stroke-[1.5]" />
               </div>
